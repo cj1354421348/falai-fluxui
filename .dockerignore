@@ -40,10 +40,6 @@ docs
 *.md
 *.MD
 
-# Docker 相关
-.dockerignore
-docker-compose*.yml
-
 # 其他不需要的文件
 .npm
 .yarn
