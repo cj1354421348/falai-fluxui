@@ -1,0 +1,70 @@
+# 版本控制系统文件
+.git
+.gitignore
+.github
+.gitlab
+.svn
+
+# 开发环境文件
+.vscode
+.idea
+*.iml
+.DS_Store
+Thumbs.db
+
+# 节点模块和构建输出
+node_modules
+coverage
+.nyc_output
+.cache
+dist
+build
+public/dist
+*.log
+
+# 开发和测试文件
+__tests__
+__mocks__
+test
+tests
+*.test.js
+*.spec.js
+jest.config.js
+.eslintrc*
+.prettierrc*
+.babelrc*
+*.map
+
+# 文档
+docs
+*.md
+*.MD
+
+# Docker 相关
+.dockerignore
+Dockerfile
+docker-compose*.yml
+
+# 其他不需要的文件
+.npm
+.yarn
+.env*
+.env.local
+.env.development
+.env.test
+.env.production
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tgz
+
+# 敏感文件
+**/*.key
+**/*.pem
+**/*.crt
+**/*.cer
+**/*secret*
+**/*password*
+**/*credential*
+**/*token*
