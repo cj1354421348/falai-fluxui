@@ -106,8 +106,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: docker  # 确保 context 指向包含 Dockerfile 的目录
-          dockerfile: docker/Dockerfile #  指定 dockerfile 所在docker/Dockerfile
+          context: .  # 确保 context 指向包含 Dockerfile 的目录
+          dockerfile: Dockerfile #  指定 dockerfile 所在docker/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
