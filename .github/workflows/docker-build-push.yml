@@ -3,12 +3,12 @@ name: docker-build-push
 on:
   push:
     branches:
-      - "master"
+      - "main"
     tags:
       - 'v*'
   pull_request:
     branches:
-      - "master"
+      - "main"
 
 # 明确定义权限，遵循最小权限原则
 permissions:
@@ -69,7 +69,7 @@ jobs:
 
       # 使用 Trivy 进行依赖扫描
       - name: Scan dependencies
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@main
         with:
           scan-type: 'fs'
           scan-ref: '.'
@@ -120,7 +120,7 @@ jobs:
       # 构建后扫描镜像漏洞
       - name: Scan Docker image
         if: github.event_name != 'pull_request'
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@main
         with:
           image-ref: ${{ env.IMAGE_NAME }}:sha-${{ github.sha }}
           format: 'table'
